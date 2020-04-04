@@ -1,0 +1,7 @@
+-- REMOVE THIS LINE AND THE ONE FOLLOWING PRIOR TO USE
+-- Usage: $ sed -i '' -f 'eric_munger' path/to/dir/*
+
+s/peerreviewed\"\:\"F\"/peerreviewed\"\:false/g
+s/peerreviewed\"\:\"T\"/peerreviewed\"\:true/g
+s/\[\"\"\]/null/g
+s/\:\"\"/\:null/g

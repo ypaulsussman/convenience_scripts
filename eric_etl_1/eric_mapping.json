@@ -1,0 +1,31 @@
+{
+  "dynamic": "strict",
+  "properties": {
+    "peerreviewed": { "type": "boolean" },
+    "publicationdateyear": { "type": "integer" },
+    "publicationtype": { "type": "keyword" },
+    "language": { "type": "keyword" },
+    "title": { "type": "text" },
+    "description": { "type": "text" },
+    "author": {
+      "type": "text",
+      "fields": {
+        "raw": {
+          "type": "keyword"
+        }
+      }
+    },
+    "subject": {
+      "type": "text",
+      "fields": {
+        "raw": {
+          "type": "keyword"
+        }
+      }
+    },
+    "id": { "type": "keyword", "index": false },
+    "isbn": { "type": "keyword", "index": false },
+    "issn": { "type": "keyword", "index": false },
+    "publisher": { "type": "keyword", "index": false }
+  }
+}
