@@ -1,0 +1,26 @@
+// http://localhost:9200/mia_development/_search?size=0
+// Content-Type:application/json
+
+{
+  "aggs": {
+      "visibility": {
+          "filter": {
+              "bool": {
+                  "must_not": {
+                      "term": {
+                          "room": "Not on View"
+                      }
+                  }
+              }
+          },
+          "aggs": {
+              "materials": {
+                  "terms": {
+                      "field": "medium",
+                      "size": 200
+                  }
+              }
+          }
+      }
+  }
+}

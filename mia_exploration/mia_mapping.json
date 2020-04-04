@@ -1,0 +1,21 @@
+{
+  "dynamic": "false",
+  "properties": {
+    "id": { "type": "integer" },
+    "curator_approved": { "type": "integer" },
+    "restricted": { "type": "integer" },
+    "classification": { "type": "keyword" },
+    "continent": { "type": "keyword" },
+    "country": { "type": "keyword" },
+    "culture":  { "type": "keyword" },
+    "dated": { "type": "keyword" },
+    "department": { "type": "keyword" },
+    "medium": { "type": "keyword" },
+    "nationality": { "type": "keyword" },
+    "object_name": { "type": "keyword" },
+    "rights_type":  { "type": "keyword" },
+    "role": { "type": "keyword" },
+    "room": { "type": "keyword" },
+    "style": { "type": "keyword" }
+  }
+}
