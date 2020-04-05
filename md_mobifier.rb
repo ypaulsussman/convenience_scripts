@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Run as e.g.
-# $ ruby mobify.rb ../path/to/md_files
+# $ ruby md_mobifier.rb /path/to/md_files
 filenames = Dir.glob('*.md', base: ARGV[0])
 
 # convert md to epub
@@ -22,7 +22,12 @@ end
 # convert epub to mobi
 Dir.mkdir './mobi_files'
 processed_filenames.each do |f|
-  mobi_success = system("/Applications/calibre.app/Contents/MacOS/ebook-convert epub_files/#{f} mobi_files/#{f.split('.epub').first}.mobi")
+  mobi_success =
+    system(
+      '/Applications/calibre.app/Contents/MacOS/ebook-convert'\
+      " epub_files/#{f}"\
+      " mobi_files/#{f.split('.epub').first}.mobi"
+    )
   p "mobifying broke on #{f}" unless mobi_success
 end
 

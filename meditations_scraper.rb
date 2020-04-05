@@ -22,7 +22,7 @@ uris.each do |uri|
 
   # Grab the download url; prep the filename
   response = Nokogiri::HTML.parse(response.body).at_css('.powerpress_link_d')
-  # TODO: .split(/tarabrach\//)[1] should work, too, right?
+  # @TODO: .split(/tarabrach\//)[1] should work, too, right?
   filename = response['href'].split(/(tarabrach\/)/)[2]
 
   # Hit the download url
