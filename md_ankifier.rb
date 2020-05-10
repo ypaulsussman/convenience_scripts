@@ -13,6 +13,7 @@ htmlified =
   .render(markdown)
   .gsub('\_', '_') # for underscores inside codeblocks
   .gsub('\- ', '- ') # for ensuring no <li>'s are added
+# @todo: add <pre> to <code> blocks?
 
 html_filename = ARGV[0].split('.md').first
 

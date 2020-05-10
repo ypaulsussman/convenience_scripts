@@ -17,8 +17,8 @@ uris.each do |uri|
   # Hit the OG url
   response = callup(URI(uri), true)
 
-  # Hit the redirect
-  response = callup(URI(response['location']), true)
+  # Hit the redirect (sometimes unnecessary)
+  # response = callup(URI(response['location']), true)
 
   # Grab the download url; prep the filename
   response = Nokogiri::HTML.parse(response.body).at_css('.powerpress_link_d')
