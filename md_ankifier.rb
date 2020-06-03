@@ -9,11 +9,8 @@ markdown = File.read(ARGV[0])
 
 htmlified =
   Redcarpet::Markdown
-  .new(Redcarpet::Render::HTML.new)
+  .new(Redcarpet::Render::HTML.new, fenced_code_blocks: true)
   .render(markdown)
-  .gsub('\_', '_') # for underscores inside codeblocks
-  .gsub('\- ', '- ') # for ensuring no <li>'s are added
-# @todo: add <pre> to <code> blocks?
 
 html_filename = ARGV[0].split('.md').first
 
