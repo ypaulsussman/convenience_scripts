@@ -8,29 +8,29 @@ import { urls, htmlCrufts } from "./gcStrings.js";
 const ogFilePath = "./gcData.md";
 const processedFilePath = "./gcDataMunged.md";
 
-// urls.forEach((courseUrl) => {
-//   get(courseUrl)
-//     .then((response) => {
-//       const $ = cheerio.load(response.data);
-//       const h1 = $(".product-name").html();
-//       const lectures = $(".lectures-container").html();
+urls.forEach((courseUrl) => {
+  get(courseUrl)
+    .then((response) => {
+      const $ = cheerio.load(response.data);
+      const h1 = $(".product-name").html();
+      const lectures = $(".lectures-container").html();
 
-//       fs.writeFileSync(ogFilePath, `qqqq${h1}\n\n`, { flag: "a+" }, (err) => {
-//         console.log("err: ", err);
-//       });
-//       fs.writeFileSync(
-//         ogFilePath,
-//         `${lectures}\n\n\n\n\n\n`,
-//         { flag: "a+" },
-//         (err) => {
-//           console.log("err: ", err);
-//         }
-//       );
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//     });
-// });
+      fs.writeFileSync(ogFilePath, `qqqq${h1} `, { flag: "a+" }, (err) => {
+        console.log("err: ", err);
+      });
+      fs.writeFileSync(
+        ogFilePath,
+        `${lectures} `,
+        { flag: "a+" },
+        (err) => {
+          console.log("err: ", err);
+        }
+      );
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});
 
 const fileContent = fs.readFileSync(ogFilePath, "utf8");
 
