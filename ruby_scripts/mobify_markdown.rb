@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'bundler/inline'
 
 # Run as e.g.
 # $ ruby md_mobifier.rb /path/to/md_files
