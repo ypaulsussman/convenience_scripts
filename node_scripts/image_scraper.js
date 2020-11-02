@@ -2,12 +2,12 @@ import fs from "fs";
 import path from "path";
 import { exec } from "child_process";
 
-// $ node ~Desktop/convenience_scripts/node_scripts/image_scraper.js ~/Desktop/path/to/toplevel/dir/
-// NB need to mkdir first
+// $ node Desktop/convenience_scripts/node_scripts/image_scraper.js ~/Desktop/path/to/toplevel/dir/
+// NB need to mkdir for L10 first
 
 const extractImages = (file, fullPath) => {
   exec(
-    `pdfimages -all "${fullPath}" ~/Desktop/testerpics/${file.replace(/ /g, "\\ ").slice(0, -4)}`,
+    `pdfimages -all "${fullPath}" ~/Desktop/pf_pics/${file.replace(/ /g, "\\ ").slice(0, -4)}`,
     (error, stdout, stderr) => {
       if (error) {
         console.log(`error: ${error.message}`);
