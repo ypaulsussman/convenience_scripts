@@ -2,12 +2,14 @@ import fs from "fs";
 import path from "path";
 import { exec } from "child_process";
 
-// $ node Desktop/convenience_scripts/node_scripts/image_scraper.js ~/Desktop/path/to/toplevel/dir/
+// $ node ~/Desktop/convenience_scripts/node_scripts/image_scraper.js ~/Documents/path/to/toplevel/dir/
 // NB need to mkdir for L10 first
 
 const extractImages = (file, fullPath) => {
   exec(
-    `pdfimages -all "${fullPath}" ~/Desktop/pf_pics/${file.replace(/ /g, "\\ ").slice(0, -4)}`,
+    `pdfimages -all "${fullPath}" ~/Desktop/pf_pics/${file
+      .replace(/ /g, "\\ ")
+      .slice(0, -4)}`,
     (error, stdout, stderr) => {
       if (error) {
         console.log(`error: ${error.message}`);
@@ -50,3 +52,7 @@ const walk = function (directoryName) {
 const startingDir = process.argv[2];
 console.log("startingDir: ", startingDir);
 walk(startingDir);
+
+// AFTER:
+// In Krita, set Filter > Colors > Color to Alpha (w/ low threshold) to remove black background
+// Alternatively, use Contiguous selection tool, cut to separate layer, then delete that layer
