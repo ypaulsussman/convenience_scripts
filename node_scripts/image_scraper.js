@@ -56,3 +56,4 @@ walk(startingDir);
 // AFTER:
 // In Krita, set Filter > Colors > Color to Alpha (w/ low threshold) to remove black background
 // Alternatively, use Contiguous selection tool, cut to separate layer, then delete that layer
+// For FR books: Krita Ctrl+i to invert colors
