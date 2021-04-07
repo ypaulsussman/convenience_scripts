@@ -1,9 +1,13 @@
 # frozen_string_literal: true
 
 # Run as e.g.
-# $ ruby md_ankifier.rb path/to/md_file
+# $ ruby ankify_markdown.rb path/to/md_file
 
-require 'redcarpet'
+require 'bundler/inline'
+gemfile do
+  source 'https://rubygems.org'
+  gem 'redcarpet'
+end
 
 markdown = File.read(ARGV[0])
 

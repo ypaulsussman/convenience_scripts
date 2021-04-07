@@ -1,8 +1,10 @@
 # frozen_string_literal: true
-require 'bundler/inline'
 
 # Run as e.g.
-# $ ruby md_mobifier.rb /path/to/md_files
+# $ ruby mobify_markdown.rb /path/to/md_files
+
+require 'bundler/inline'
+
 filenames = Dir.glob('*.md', base: ARGV[0])
 
 # convert md to epub
