@@ -7,7 +7,7 @@ import { exec } from "child_process";
 
 const extractImages = (file, fullPath) => {
   exec(
-    `pdfimages -all "${fullPath}" ~/Desktop/pf_pics/${file
+    `pdfimages -all "${fullPath}" ~/Desktop/third_party/${file
       .replace(/ /g, "\\ ")
       .slice(0, -4)}`,
     (error, stdout, stderr) => {

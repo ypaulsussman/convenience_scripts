@@ -2,6 +2,7 @@
 
 # Run as e.g.
 # $ ruby ankify_markdown.rb path/to/md_file
+# May need to run from ~ or ~/Desktop, depending on user permissions
 
 require 'bundler/inline'
 gemfile do
