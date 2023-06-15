@@ -7,6 +7,8 @@ NB the choice of language for given script is derived entirely from my professio
   - `gcTocScraper.js` is for grabbing _Great Courses_ course lists off their website and making them plaintext/manipulable. (`gcStrings.js` exists solely to provide data for this code.)
 
   - `image_scraper.js` is for extracting images from a hierarchy of arbitrary depth containing dirs and `.pdf` files.
+  
+  - `ankify_markdown.js` is for converting your Markdown notes to Anki-friendly HTML.
 
 - In `python_scripts`:
   - `anki_csvifier.py` transforms a bunch of Mandarin<>English Anki-card exports to CSV from their default format.
@@ -25,7 +27,7 @@ NB the choice of language for given script is derived entirely from my professio
     - indexing [MIA's collection-metadata](https://github.com/artsmia/collection/tree/master/objects) to Elasticsearch (_focuses only on_ `terms`_-bucketable fields_); 
     - exploring the characteristics of what's currently on display.
 
-  - `ankify_markdown.rb` is for converting your Markdown notes to Anki-friendly HTML.
+  - `ankify_markdown.rb` is for converting your Markdown notes to Anki-friendly HTML (and effectively identical to the similarly-named script in the `node_scripts/` dir)
 
   - `meditations_scraper.rb` is for downloading `.mp3` files from that one meditation guide you like, so you don't have to always access through browser.
   
