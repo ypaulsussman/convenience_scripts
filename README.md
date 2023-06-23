@@ -10,6 +10,8 @@ NB the choice of language for given script is derived entirely from my professio
   
   - `ankify_markdown.js` is for converting your Markdown notes to Anki-friendly HTML.
 
+  - `oplv2_scripts/` contains scripts for enhancing the `"authors"` data from my (_very outdated!_) ["Other People's Lines" side project](https://github.com/ypaulsussman/opl) with details from Wikipedia's public API, for usage in future apps; `oplv2_data/` contains the associated output.
+
 - In `python_scripts`:
   - `anki_csvifier.py` transforms a bunch of Mandarin<>English Anki-card exports to CSV from their default format.
 
