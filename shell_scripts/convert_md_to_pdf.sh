@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# HOW TO USE: `cp` both this and the `blanK_pages.pdf` file into the dir containing all the markdown files you want to convert to PDF, then run `./convert_md_to_pdf.sh` in the terminal; you should get a new `output.pdf` file in the same dir containing all the converted PDFs with blank pages added in between.
+
 set -e
 
 temp_dir=$(mktemp -d)
